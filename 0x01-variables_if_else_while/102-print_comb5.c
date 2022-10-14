@@ -25,7 +25,7 @@ while (l <= 9)
 {
 m = i + j;
 n = k + l;
-if (m < n && j < k && k >= i)
+if (j <= k && k >= i)
 {
 putchar((i % 10) + '0');
 putchar((j % 10) + '0');
@@ -42,8 +42,7 @@ else
 putchar(32);
 }
 else
-{
-}
+{}
 l++;
 }
 l = 0;
