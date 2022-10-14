@@ -14,7 +14,7 @@ char z = 'z';
 
 while (a <= z)
 {
-if (a == 'e' || a =='q')
+if (a == 'e' || a == 'q')
 {
 }
 else
