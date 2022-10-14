@@ -19,8 +19,16 @@ if (i < j)
 {
 putchar((i % 10) + '0');
 putchar((j % 10) + '0');
+int k;
+k = i + j;
+if (k < 17)
+{
 putchar(44);
 putchar(32);
+}
+else
+{
+}
 }
 else
 {
