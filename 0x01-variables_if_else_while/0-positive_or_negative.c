@@ -2,10 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-/*main:Entry point*/
-/*return:This is a success code*/
+/**
+ * main - Entry point.
+ *
+ * return : This is a success code.
+ */
 
-int main(void)
+main(void)
 {
 int n;
 
