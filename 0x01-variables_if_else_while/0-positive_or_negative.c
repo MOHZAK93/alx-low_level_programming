@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 /**
- * main - Entry point.
+ * main - Entry point
  *
- * return : This is a success code.
+ * Description: 'the program's description'
+ *
+ * Return: Always 0 (Success)
  */
 
-main(void)
+int main(void)
 {
 int n;
 
