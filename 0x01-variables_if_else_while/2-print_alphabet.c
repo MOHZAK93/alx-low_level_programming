@@ -10,8 +10,9 @@
 int main(void)
 {
 char a = 'a';
+char z = 'z';
 
-while (a <= 122)
+while (a <= z)
 {
 putchar(a);
 a++;
