@@ -22,8 +22,6 @@ while (k <= 9)
 {
 while (l <= 9)
 {
-m = i + j;
-n = k + l;
 if (j <= k && k >= i)
 {
 putchar((i % 10) + '0');
