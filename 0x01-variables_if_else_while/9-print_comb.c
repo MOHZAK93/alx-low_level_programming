@@ -16,7 +16,7 @@ putchar((i % 10) + '0');
 if (i < 9)
 {
 putchar(44);
-putchar(0);
+putchar(32);
 }
 else
 {
