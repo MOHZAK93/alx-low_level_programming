@@ -22,8 +22,6 @@ while (k <= 9)
 {
 while (l <= 9)
 {
-if (j <= k && k >= i)
-{
 putchar((i % 10) + '0');
 putchar((j % 10) + '0');
 putchar(32);
@@ -38,8 +36,6 @@ else
 {}
 putchar(32);
 }
-else
-{}
 l++;
 }
 l = 0;
