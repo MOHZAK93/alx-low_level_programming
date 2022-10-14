@@ -9,12 +9,11 @@
 
 int main(void)
 {
-int i, j, k, l, m, n, p;
+int i, j, k, l, p;
 i = 0;
 j = 0;
 k = 0;
 l = 1;
-
 while (i <= 9)
 {
 while (j <= 8)
