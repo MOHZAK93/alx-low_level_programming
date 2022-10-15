@@ -28,7 +28,7 @@ putchar(32);
 putchar((k % 10) + '0');
 putchar((l % 10) + '0');
 p = i + j + k + l;
-if (p < 35)
+if (p <= 35)
 {
 putchar(44);
 }
