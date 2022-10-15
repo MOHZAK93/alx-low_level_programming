@@ -18,8 +18,8 @@ while (j <= 9)
 {
 if (i < j)
 {
-putchar((i % 10) + '0');
-putchar((j % 10) + '0');
+putchar(i + '0');
+putchar(j + '0');
 
 k = i + j;
 if (k < 17)
