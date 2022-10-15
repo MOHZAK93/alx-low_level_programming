@@ -9,28 +9,32 @@
 
 int main(void)
 {
-int i, j, p;
+int i, j, k, l, p;
 i = 0;
-j = 1;
-while (i <= 99)
+while (i <= 9)
 {
-while (j <= 99)
+j = 0;
+while (j <= 9)
 {
-putchar((i % 10) + '0');
+k = 0;
+while (k <= 9)
+{
+l = 0;
+while (l <= 9)
+{
+putchar(i + '0');
+putchar(j + '0');
 putchar(32);
-putchar((j % 10) + '0');
-p = i + j;
-if (p <= 35)
-{
+putchar(k + '0');
+putchar(l + '0');
 putchar(44);
-}
-else
-{
-}
 putchar(32);
+l++;
+}
+k++;
+}
 j++;
 }
-j = 0;
 i++;
 }
 putchar(10);
