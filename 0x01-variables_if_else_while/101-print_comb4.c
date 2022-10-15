@@ -21,9 +21,9 @@ while (k < 10)
 {
 if (i < j && j < k)
 {
-putchar((i % 10) + '0');
-putchar((j % 10) + '0');
-putchar((k % 10) + '0');
+putchar(i + '0');
+putchar(j + '0');
+putchar(k + '0');
 l = i + j + k;
 if (l < 24)
 {
