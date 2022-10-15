@@ -22,6 +22,8 @@ while (k <= 9)
 l = 0;
 while (l <= 9)
 {
+if (i == j == k == l)
+{
 putchar(i + '0');
 putchar(j + '0');
 putchar(32);
@@ -30,6 +32,9 @@ putchar(l + '0');
 putchar(44);
 putchar(32);
 l++;
+}
+else
+{}
 }
 k++;
 }
