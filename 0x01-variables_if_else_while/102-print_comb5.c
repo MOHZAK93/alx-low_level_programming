@@ -11,15 +11,15 @@ int main(void)
 {
 int i, j, k, l, p;
 i = 0;
-j = 0;
-k = 0;
-l = 1;
 while (i <= 9)
 {
+j = 0;
 while (j <= 8)
 {
+k = 0;
 while (k <= 9)
 {
+l = 1;
 while (l <= 9)
 {
 putchar((i % 10) + '0');
@@ -38,13 +38,10 @@ else
 putchar(32);
 l++;
 }
-l = 2;
 k++;
 }
-k = 0;
 j++;
 }
-j = 1;
 i++;
 }
 putchar(10);
