@@ -22,7 +22,7 @@ while (k <= 9)
 l = 0;
 while (l <= 9)
 {
-if (i == j == k == l)
+if (i == j && j == k && k == l)
 {
 putchar(i + '0');
 putchar(j + '0');
