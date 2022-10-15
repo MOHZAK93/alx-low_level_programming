@@ -11,18 +11,17 @@ int main(void)
 {
 int i, j, k, l, p;
 i = 0;
+j = 0;
+k = 0;
+l = 1;
 while (i <= 9)
 {
-j = 0;
-while (j <= 8)
+while (j <= 9)
 {
-k = 0;
 while (k <= 9)
 {
-l = 0;
 while (l <= 9)
 {
-l++;
 putchar((i % 10) + '0');
 putchar((j % 10) + '0');
 putchar(32);
@@ -37,11 +36,15 @@ else
 {
 }
 putchar(32);
+l++;
 }
+l = 0;
 k++;
 }
+k = 0;
 j++;
 }
+j = 0;
 i++;
 }
 putchar(10);
