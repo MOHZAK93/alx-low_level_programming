@@ -19,9 +19,10 @@ while (j <= 8)
 k = 0;
 while (k <= 9)
 {
-l = 1;
+l = 0;
 while (l <= 9)
 {
+l++;
 putchar((i % 10) + '0');
 putchar((j % 10) + '0');
 putchar(32);
@@ -36,7 +37,6 @@ else
 {
 }
 putchar(32);
-l++;
 }
 k++;
 }
