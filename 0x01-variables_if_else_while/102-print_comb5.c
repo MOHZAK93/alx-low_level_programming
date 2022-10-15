@@ -9,7 +9,7 @@
 
 int main(void)
 {
-int i, j, k, l, p;
+int i, j, k, l;
 i = 0;
 while (i <= 9)
 {
