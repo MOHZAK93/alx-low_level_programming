@@ -38,13 +38,10 @@ else
 putchar(32);
 l++;
 }
-l = 0;
 k++;
 }
-k = 0;
 j++;
 }
-j = 0;
 i++;
 }
 putchar(10);
