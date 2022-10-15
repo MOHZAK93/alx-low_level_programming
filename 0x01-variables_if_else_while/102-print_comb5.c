@@ -33,9 +33,9 @@ if (p < 35)
 putchar(44);
 }
 else
-{}
-putchar(32);
+{
 }
+putchar(32);
 l++;
 }
 l = 0;
