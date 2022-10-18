@@ -20,8 +20,8 @@ for (k = 0; k < 5; k++)
 {
 for (l = 0; l < 10; l++)
 {
-_putchar(i);
-_putchar(j);
+_putchar(i + '0');
+_putchar(j + '0');
 _putchar(':');
 _putchar(k);
 _putchar(l);
