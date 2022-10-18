@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isalpha
+ * _isalpha - This function is called by main
  *
  * Description: This function is called by main
  *
@@ -10,7 +10,7 @@
  * Return: Always return 0 (Success)
  */
 
-int _isalpha(int c);
+int _isalpha(int c)
 {
 if (c >= 'A' && c <= 'Z')
 {
@@ -20,7 +20,7 @@ if (c >= 'a' && c <= 'z')
 {
 return (1);
 }
-else 
+else
 {
 return (0);
 }
