@@ -1,4 +1,4 @@
-#include "main.h"
+#include <main.h>
 
 /**
  * print_alphabet_x10 - This function is called by main
@@ -11,18 +11,17 @@
 
 void print_alphabet_x10(void)
 {
-char a = 'a';
-char z = 'z';
-int i = 0;
+char a;
+char z;
+int j;
 
-while (i < 10)
+for (j = 0; j < 10; j++)
 {
-while (a <= z)
+for (a = 'a'; a <= 'z'; a++)
 {
-putchar(a);
-a++;
+printf("%c", a);
 }
-i++;
-putchar('\n');
+putchar(10);
 }
+return (0);
 }
