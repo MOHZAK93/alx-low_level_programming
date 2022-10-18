@@ -9,11 +9,13 @@
  * Return: Always return 0 (Success)
  */
 
-int print_alphabet(int)
+int print_alphabet(void)
 {
 char a = 'a';
 int z = 'z';
 while (a <= z)
+{
 putchar(a);
 a++;
+}
 }
