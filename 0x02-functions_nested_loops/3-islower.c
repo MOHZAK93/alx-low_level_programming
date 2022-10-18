@@ -10,7 +10,6 @@
 
 int _islower(int c)
 {
-c = getchar();
 if (c >= 'a' && c <= 'z')
 {
 return (1);
