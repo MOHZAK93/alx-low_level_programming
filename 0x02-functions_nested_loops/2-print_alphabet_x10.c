@@ -19,7 +19,7 @@ for (j = 0; j < 10; j++)
 {
 for (a = 'a'; a <= 'z'; a++)
 {
-printf("%c", a);
+putchar(a);
 }
 putchar(10);
 }
