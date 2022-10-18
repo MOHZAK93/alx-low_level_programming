@@ -3,7 +3,7 @@
 /**
  * _islower - This function is called by main.
  *
- * c - the argument for the function
+ * @c: the argument for the function
  *
  * Description: Write a function that checks for lowercase character.
  *
