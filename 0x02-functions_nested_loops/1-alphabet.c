@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <main.h>
 
 /**
  * main - Entry point
@@ -9,9 +9,7 @@
  * Return: Always return 0 (Success)
  */
 
-void print_alphabet(void);
-
-print_alphabet()
+int print_alphabet(void)
 {
 char a = 'a';
 int z = 'z';
