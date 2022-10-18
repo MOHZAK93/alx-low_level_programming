@@ -22,9 +22,7 @@ else if (n == 0)
 return (0);
 putchar('0');
 }
-else if (n < 0)
-{
+else
 return (-1);
 putchar('-');
-}
 }
