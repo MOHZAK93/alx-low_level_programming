@@ -17,7 +17,7 @@ int i = 0;
 
 while (i < 10)
 {
-while (a < z)
+while (a <= z)
 {
 putchar(a);
 a++;
