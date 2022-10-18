@@ -9,7 +9,7 @@
  * Return: Always return 0 (Success)
  */
 
-int print_alphabet(void)
+int print_alphabet(int)
 {
 char a = 'a';
 int z = 'z';
