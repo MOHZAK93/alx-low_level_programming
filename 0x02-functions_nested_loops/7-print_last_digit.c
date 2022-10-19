@@ -17,9 +17,6 @@ if (n < 0)
 {
 n = n * -1;
 }
-else
-{
-}
 _putchar('0' + (n % 10));
 return (n % 10);
 }
