@@ -17,7 +17,7 @@ for (i = 0; i < 10; i++)
 int j = 0;
 while (j < 10)
 {
-_putchar(i + j);
+_putchar(i + '0');
 _putchar(',');
 _putchar(' ');
 _putchar(' ');
