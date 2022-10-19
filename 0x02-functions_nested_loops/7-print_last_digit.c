@@ -11,12 +11,12 @@
  * Return: Always return 0 (Success)
  */
 
-int print_last_digit(unsigned int n)
+int print_last_digit(int n)
 {
 if (n < 0)
 {
 n = n * -1;
 }
-_putchar('0' + (n % 10));
+_putchar('0' + (n / 10));
 return (n % 10);
 }
