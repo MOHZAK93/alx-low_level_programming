@@ -15,10 +15,8 @@ int i;
 long int j = 1;
 long int k = 2;
 long int sum = 0;
-for (i = 0; i < k && k < 4000000; i++)
+for (i = 0; i < k && k <= 4000000; i++)
 {
-j = j + k;
-k = k + j;
 if (j % 2 == 0)
 {
 sum += j;
@@ -30,6 +28,8 @@ sum += k;
 else
 {
 }
+j += k;
+k += j;
 }
 printf("%ld\n", sum);
 return (0);
