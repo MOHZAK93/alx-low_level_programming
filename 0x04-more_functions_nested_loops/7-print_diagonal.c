@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -7,21 +6,23 @@
  * @n: The parameter of the function
  *
  * Description: Write a function that draws a diagonal line on the terminal.
- *
- * Return: 0
  */
 
-void main(int n)
+void print_diagonal(int n)
 {
-n = 10;
-if (n <= 0)
-putchar('\n');
-int i;
-for (i = 0; i < n; i++)
+if (n > 0)
 {
-putchar('\\');
-putchar('\n');
-putchar(' ');
+int i, space;
+
+for (i = 1; i <= n; i++)
+{
+for (space = 1; space < i; space++)
+{
+_putchar(' ');
+}
+_putchar('\\');
+_putchar('\n');
+}
 }
 putchar('\n');
 }
