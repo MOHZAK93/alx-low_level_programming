@@ -12,7 +12,7 @@
 
 int _isupper(int c)
 {
-int A ='A';
+int A = 'A';
 int Z = 'Z';
 
 if (c >= A && c <= Z)
