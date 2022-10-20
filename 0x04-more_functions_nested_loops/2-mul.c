@@ -12,7 +12,7 @@
  * Return: 0
  */
 
-int mul(int a, int b)
+long int mul(int a, int b)
 {
 return (a * b);
 }
