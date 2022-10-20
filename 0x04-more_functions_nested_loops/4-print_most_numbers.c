@@ -21,7 +21,8 @@ _putchar(i + '0');
 else
 {
 }
-}
 i++;
+}
+_putchar('\n');
 }
 
