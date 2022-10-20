@@ -10,7 +10,7 @@
  * Return: 0
  */
 
-int _isdigit(int c);
+int _isdigit(int c)
 {
 int fnum = '0';
 int lnum = '9';
