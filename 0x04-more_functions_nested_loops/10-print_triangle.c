@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -11,7 +12,6 @@
 
 void print_triangle(int size)
 {
-
 	if (size > 0)
 	{
 		int width, height;
