@@ -12,11 +12,11 @@
 
 int _isdigit(int c)
 {
-int fnum = '0';
-int lnum = '9';
+	int fnum = '0';
+	int lnum = '9';
 
-if (c >= fnum && c <= lnum)
-return (1);
-else
-return (0);
+	if (c >= fnum && c <= lnum)
+		return (1);
+	else
+		return (0);
 }
