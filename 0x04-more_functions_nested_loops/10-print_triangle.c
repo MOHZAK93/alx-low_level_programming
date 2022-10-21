@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -14,11 +13,11 @@ void print_triangle(int size)
 {
 	if (size > 0)
 	{
-		int width, height;
+		int width, height, space;
 
 		for (height = 0; height < size; height++)
 		{
-			for (int space = 1; space < size - height; space++)
+			for (space = 1; space < size - height; space++)
 			{
 				_putchar(' ');
 			}
