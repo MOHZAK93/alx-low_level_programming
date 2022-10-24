@@ -11,14 +11,14 @@
 void print_rev(char *s)
 {
 	int i = 0;
-	int total = 1;
+	int total = 0;
 
 	while (s[i] != '\0')
 	{
 		total++;
 		i++;
 	}
-	while (total > 0)
+	while ((total - 1) >= 0)
 	{
 		_putchar(s[total]);
 		total--;
