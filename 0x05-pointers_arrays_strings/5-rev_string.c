@@ -21,6 +21,6 @@ void rev_string(char *s)
 		total--;
 		rev = s[i];
 		s[i] = s[total];
-		rev = s[total];
+		s[total] = rev;
 	}
 }
