@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
   *print_array - This function prints an array of intergers
