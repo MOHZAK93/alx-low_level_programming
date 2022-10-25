@@ -8,7 +8,7 @@
   *Return: string
   */
 
-char *_strcpy(char *dest,const char *src)
+char *_strcpy(char *dest, const char *src)
 {
 	int i = 0;
 
