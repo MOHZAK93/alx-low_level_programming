@@ -5,7 +5,7 @@ int _strcmp(char *s1, char *s2)
 	int i;
 	int s1_len = 0;
 	int s2_len = 0;
-	
+
 	for (i = 0; s1[i]; i++)
 		s1_len++;
 
