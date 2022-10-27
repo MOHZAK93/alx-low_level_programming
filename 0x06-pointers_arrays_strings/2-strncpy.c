@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
   *_strncpy - This function copies a string
@@ -8,6 +9,7 @@
   *@n: The third pointer parameter
   *Return: string
   */
+
 
 char *_strncpy(char *dest, char *src, int n)
 {
@@ -22,6 +24,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 	for (i = 0; src[i] && i < n; i++)
 		dest[i] = src[i];
+	dest[i] = '\0';
 
 	for (i = src_len; i < n; i++)
 		dest[i] = '\0';
