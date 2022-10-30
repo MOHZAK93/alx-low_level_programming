@@ -1,0 +1,24 @@
+total 152
+drwxrwxr-x 2 vagrant vagrant  4096 Oct 22 09:38 .
+drwxrwxr-x 8 vagrant vagrant  4096 Oct 21 21:21 ..
+-rw-rw-r-- 1 vagrant vagrant   296 Oct 21 09:24 0-isupper.c
+-rw-rw-r-- 1 vagrant vagrant   784 Oct 21 08:29 0-isupper.s
+-rw-rw-r-- 1 vagrant vagrant   323 Oct 21 09:25 1-isdigit.c
+-rw-rw-r-- 1 vagrant vagrant   543 Oct 21 23:16 10-print_triangle.c
+-rw-rw-r-- 1 vagrant vagrant   260 Oct 21 23:30 100-prime_factor.c
+-rw-rw-r-- 1 vagrant vagrant   377 Oct 22 08:33 101-print_number.c
+-rw-rw-r-- 1 vagrant vagrant   297 Oct 21 09:22 2-mul.c
+-rw-rw-r-- 1 vagrant vagrant   295 Oct 21 09:26 3-print_numbers.c
+-rw-rw-r-- 1 vagrant vagrant   376 Oct 21 09:30 4-print_most_numbers.c
+-rwxrwxr-x 1 vagrant vagrant 16712 Oct 20 21:51 5-more_numbers
+-rw-rw-r-- 1 vagrant vagrant   423 Oct 21 09:32 5-more_numbers.c
+-rw-rw-r-- 1 vagrant vagrant   352 Oct 21 09:36 6-print_line.c
+-rwxrwxr-x 1 vagrant vagrant 16712 Oct 20 18:52 7-print_diagonal
+-rw-rw-r-- 1 vagrant vagrant   433 Oct 21 09:38 7-print_diagonal.c
+-rwxrwxr-x 1 vagrant vagrant 16712 Oct 20 21:20 8-print_square
+-rw-rw-r-- 1 vagrant vagrant   322 Oct 21 09:41 8-print_square.c
+-rwxrwxr-x 1 vagrant vagrant 16752 Oct 20 20:47 9-fizz_buzz
+-rw-rw-r-- 1 vagrant vagrant   446 Oct 21 09:43 9-fizz_buzz.c
+-rw-rw-r-- 1 vagrant vagrant    36 Oct 20 11:17 README.md
+-rw-rw-r-- 1 vagrant vagrant     0 Oct 22 09:38 ls_cwd_content
+-rw-rw-r-- 1 vagrant vagrant   307 Oct 21 23:48 main.h

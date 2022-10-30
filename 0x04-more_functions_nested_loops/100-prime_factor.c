@@ -1,16 +1,18 @@
 #include <stdio.h>
-
-/**
- * main - Entry point
- *
- * Description: a program that finds and prints the largest
- * prime factor of the number 612852475143
- *
- * Return: Always return 0 (Success)
- */
+#include <math.h>
 
 int main(void)
 {
-	long long int = 612852475143;
+	long y = 612852475143;
+	long int x;
+
+	for (x = sqrt(y); x < y; x++)
+	{
+		if (y % x == 0)
+		{
+			printf("%lu\n", x);
+			break;
+		}
+	}
 	return (0);
 }
