@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <math.h>
 
+/**
+  *main - Entry point
+  *Return: 0
+  */
+
 int main(void)
 {
 	long y = 612852475143;
