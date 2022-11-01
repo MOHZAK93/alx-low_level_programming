@@ -13,6 +13,7 @@
 char *_strpbrk(char *s, char *accept)
 {
 	while (*s)
+	{
 		if (*s != ' ')
 		{
 			while (*accept)
@@ -24,4 +25,6 @@ char *_strpbrk(char *s, char *accept)
 		}
 		else
 			return (NULL);
+	}
+	return (s);
 }
