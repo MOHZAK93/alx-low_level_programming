@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
   *_strspn - function that gets length of prefix substing
@@ -8,17 +9,16 @@
   *Return: integer
   */
 
-
 unsigned int _strspn(char *s, char *accept)
 {
 	int k = 0;
 
 	while (*s)
 	{
-		if (*s != 32)
+		if (*s != ' ')
 		{
 			while (*accept)
-			{
+			{	
 				if (*s == *accept)
 					k++;
 				accept++;
