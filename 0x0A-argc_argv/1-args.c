@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
   *main - Entry point
@@ -9,10 +10,6 @@
 
 int main(int argc, char *argv[])
 {
-	int i = 0;
-
-	while (i < argc)
-		i++;
-	printf("%d\n", i);
+	printf("%d\n", argc);
 	return (0);
 }
