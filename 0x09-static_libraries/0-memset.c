@@ -1,5 +1,2 @@
 #include "main.h"
-
-char *_memset(char *s, char b, unsigned int n)
-{
-}
+typedef int make_iso_compilers_happy;

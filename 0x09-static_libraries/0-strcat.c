@@ -1,6 +1,2 @@
 #include "main.h"
-
-char *_strcat(char *dest, char *src)
-{
-
-}
+typedef int make_iso_compilers_happy;

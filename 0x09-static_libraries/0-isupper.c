@@ -1,6 +1,2 @@
 #include "main.h"
-
-int _isupper(int c)
-{
-	return (0);
-}
+typedef int make_iso_compilers_happy;
