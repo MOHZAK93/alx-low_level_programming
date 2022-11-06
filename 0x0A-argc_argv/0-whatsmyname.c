@@ -7,7 +7,7 @@
   *@argv: pointer to arguments
   */
 
-int main(int argc, char *argv[])
+void main(int argc, char *argv[])
 {
 	argc = 0;
 	printf("%s\n", argv[argc]);
