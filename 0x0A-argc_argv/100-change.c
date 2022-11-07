@@ -10,8 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int num, i, tmp, change;
-	int	units[5];
+	int cent;
 
 	if (argc != 2)
 	{
@@ -25,15 +24,24 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
+	cent = atoi(argv[1]);
+
+	change(cent);
+
+	return (0);
+}
+
+int change(int num)
+{
+	int i, tmp, change;
+	int	units[5];
+	tmp = change = 0;
+
 	units[0] = 25;
 	units[1] = 10;
 	units[2] = 5;
 	units[3] = 2;
 	units[4] = 1;
-
-	num = atoi(argv[1]);
-	tmp = 0;
-	change = 0;
 
 	for (i = 0; i < 5; i++)
 	{
