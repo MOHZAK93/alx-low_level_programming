@@ -31,10 +31,17 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
+/**
+  *change - function to calculate change
+  *@num: integer input in cents
+  *Return: 0
+  */
+
 int change(int num)
 {
 	int i, tmp, change;
 	int	units[5];
+
 	tmp = change = 0;
 
 	units[0] = 25;
