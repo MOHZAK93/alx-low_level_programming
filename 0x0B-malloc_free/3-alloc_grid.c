@@ -2,11 +2,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+  *alloc_grid - function that returns a pointer to 2D array
+  *
+  *@width: width of array
+  *@height: height of array
+  *
+  *Return: pointer to a pointer
+  */
+
 int **alloc_grid(int width, int height)
 {
 	int **ptr;
-	int h = 0;
-	int w;
+	unsigned int h = 0;
+	unsigned int w;
 
 	if (width < 1 || height < 1)
 	{
@@ -21,7 +30,6 @@ int **alloc_grid(int width, int height)
 		ptr[h] = malloc(sizeof(int) * width);
 		if (ptr[h] == NULL)
 			return (NULL);
-	
 		w = 0;
 		while (w < width)
 		{
