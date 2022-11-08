@@ -22,9 +22,9 @@ char *str_concat(char *s1, char *s2)
 
 	if (str == NULL)
 		return (NULL);
-	if (s1 == NULL)
+	if (*s1 == NULL)
 		return (s2);
-	if (s2 == NULL)
+	if (*s2 == NULL)
 		return (s1);
 
 	while (s1[i])
