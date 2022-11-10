@@ -1,22 +1,19 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
-  *argstostr - function that concatenates arguments
+  *arraysize - function to calculate size of array
   *
   *@ac: number of arguments
   *@av: pointer to arguments
   *
-  *Return: char pointer
+  *Return: integer
   */
 
-char *argstostr(int ac, char **av)
+int arraysize(int ac, char **av)
 {
-	char *str, *c;
-	int j, i = 0;
-	int b, a = 0;
-	int size = 0;
+	int a, b, size;
+	a = size = 0;
 
 	while (a < ac)
 	{
@@ -28,7 +25,24 @@ char *argstostr(int ac, char **av)
 		}
 		a++;
 	}
-	size++;
+	return (++size);
+}
+
+/**
+  *argstostr - function to concatenate strings
+  *
+  *@ac: number of arguments
+  *@av: pointer to arguments
+  *
+  *Return: char pointer
+  */
+
+char *argstostr(int ac, char **av)
+{
+	char *str, *c;
+	int j, i = 0;
+
+	int size = arraysize(ac, av);
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
