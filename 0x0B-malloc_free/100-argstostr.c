@@ -13,11 +13,13 @@
 int arraysize(int ac, char **av)
 {
 	int a, b, size;
+
 	a = size = 0;
 
 	while (a < ac)
 	{
 		b = 0;
+
 		while (av[a][b])
 		{
 			size++;
