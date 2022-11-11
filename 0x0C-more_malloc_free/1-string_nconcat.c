@@ -9,7 +9,7 @@
   */
 int strl1(char *s1)
 {
-	int lens1 = 0;
+	unsigned int lens1 = 0;
 
 	while (*s1)
 	{
@@ -27,7 +27,7 @@ int strl1(char *s1)
   */
 int strl2(char *s2)
 {
-	int lens2 = 0;
+	unsigned int lens2 = 0;
 
 	while (*s2)
 	{
@@ -48,12 +48,13 @@ int strl2(char *s2)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *str;
+	char *str, *c;
+	unsigned int lens1, lens2;
 
 	if (s1 == NULL || s2 ==	NULL)
 		return (NULL);
-	strl1(s1);
-	strl2(s2);
+	lens1 = strl1(s1);
+	lens2 = strl2(s2);
 
 	if (lens2 >= n)
 		str = malloc((lens1 + n + 1) * sizeof(*str));
@@ -62,6 +63,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (str == NULL)
 		return (NULL);
+	c = str;
 
 	while (*s1)
 	{
@@ -76,5 +78,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2++;
 		n--;
 	}
-	return (str);
+	return (c);
 }
