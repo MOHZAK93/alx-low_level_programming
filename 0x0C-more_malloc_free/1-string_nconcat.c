@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
   *strl1 - function to calculate length of string
   *
@@ -7,6 +8,16 @@
   *
   *Return: length of string
   */
+int main(void)
+{
+	char *concat;
+
+	concat = string_nconcat("Best ", "School !!!", 6);
+	printf("%s\n", concat);
+	free(concat);
+	return (0);
+}
+
 int strl1(char *s1)
 {
 	unsigned int lens1 = 0;
