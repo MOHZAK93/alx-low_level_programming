@@ -11,36 +11,32 @@
   *
   *Return: char pointer
   */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
-	unsigned int lens1, lens2, a, b;
+	unsigned int a, b, i, j;
 
-	lens1 = lens2 = 0;
-
-	for (a = 0; *s1 != '\0'; a++)
-		lens1++;
-	for (b = 0; *s2 != '\0'; b++)
-		lens2++;
+	for (a = 0; s1[a] != '\0'; a++)
+		;
+	for (b = 0; s2[b] != '\0'; b++)
+		;
 
 	if (s1 == NULL || s2 ==	NULL)
 		return (NULL);
-	lens1 = strl1(s1);
-	lens2 = strl2(s2);
 
-	if (n > lens2)
-		str = malloc((lens1 + lens2 + 1) * sizeof(*str));
+	if (n > b)
+		str = malloc((a + b + 1) * sizeof(*str));
 	else
-		str = malloc((lens1 + n + 1) * sizeof(*str));
+		str = malloc((a + n + 1) * sizeof(*str));
 
 	if (str == NULL)
 		return (NULL);
 
-	for (a = 0; a < lens1; a++)
-		str[a] = s1[a];
-	for (b = 0; b < lens2 && b < n; b++, a++)
-		str[a] = s2[b];
-	str[a] = '\0';
+	for (i = 0; i < a; i++)
+		str[i] = s1[i];
+
+	for (j = 0; j < b && j < n; j++, i++)
+		str[i] = s2[j];
+	str[i] = '\0';
 	return (str);
 }
