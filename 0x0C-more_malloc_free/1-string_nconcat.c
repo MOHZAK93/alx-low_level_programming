@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
   *strl1 - function to calculate length of string
   *
@@ -8,7 +7,6 @@
   *
   *Return: length of string
   */
-
 int strl1(char *s1)
 {
 	int lens1 = 0;
@@ -20,7 +18,6 @@ int strl1(char *s1)
 	}
 	return (lens1);
 }
-
 /**
   *strl2 - function to calculate length of string
   *
@@ -28,7 +25,6 @@ int strl1(char *s1)
   *
   *Return: length of string
   */
-
 int strl2(char *s2)
 {
 	int lens2 = 0;
@@ -40,7 +36,6 @@ int strl2(char *s2)
 	}
 	return (lens2);
 }
-
 /**
   *string_nconcat - function to concatenate string
   *
