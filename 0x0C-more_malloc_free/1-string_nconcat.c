@@ -10,26 +10,35 @@
   *
   *Return: char pointer
   */
-
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+int strl1(char *s1)
 {
-	char *str;
 	int lens1 = 0;
-	int lens2 = 0;
 
 	while (*s1)
 	{
 		lens1++;
 		s1++;
 	}
+	return (lens1);
+}
+int strl2(char *s2)
+{
+	int lens2 = 0;
 	while (*s2)
 	{
 		lens2++;
 		s2++;
 	}
+	return (lens2);
+}
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+	char *str;
 
 	if (s1 == NULL || s2 ==	NULL)
 		return (NULL);
+	strl1(s1);
+	strl2(s2);
 
 	if (lens2 >= n)
 		str = malloc((lens1 + n + 1) * sizeof(*str));
