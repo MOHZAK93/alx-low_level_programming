@@ -2,14 +2,13 @@
 #include <stdlib.h>
 
 /**
-  *string_nconcat - function that concatenates two strings
+  *strl1 - function to calculate length of string
   *
-  *@s1: first string
-  *@s2: second string
-  *@n: size of second string to add
+  *@s1: string pointer
   *
-  *Return: char pointer
+  *Return: length of string
   */
+
 int strl1(char *s1)
 {
 	int lens1 = 0;
@@ -21,9 +20,19 @@ int strl1(char *s1)
 	}
 	return (lens1);
 }
+
+/**
+  *strl2 - function to calculate length of string
+  *
+  *@s2: string pointer
+  *
+  *Return: length of string
+  */
+
 int strl2(char *s2)
 {
 	int lens2 = 0;
+
 	while (*s2)
 	{
 		lens2++;
@@ -31,6 +40,17 @@ int strl2(char *s2)
 	}
 	return (lens2);
 }
+
+/**
+  *string_nconcat - function to concatenate string
+  *
+  *@s1: first string pointer
+  *@s2: second string pointer
+  *@n: length of s2 to add
+  *
+  *Return: char pointer
+  */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
