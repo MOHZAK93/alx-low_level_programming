@@ -65,24 +65,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (str == NULL)
 		return (NULL);
-	a = 0;
 
-	while (lens1)
-	{
+	for (a = 0; a < lens1; a++)
 		str[a] = s1[a];
-		a++;
-		lens1--;
-	}
-	b = 0;
-
-	while (lens2 && n)
-	{
+	for (b = 0; b < lens2 && b < n; b++, a++)
 		str[a] = s2[b];
-		b++;
-		a++;
-		lens2--;
-		n--;
-	}
 	str[a] = '\0';
 	return (str);
 }
