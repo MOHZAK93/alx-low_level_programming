@@ -8,15 +8,6 @@
   *
   *Return: length of string
   */
-int main(void)
-{
-	char *concat;
-
-	concat = string_nconcat("Best ", "School !!!", 6);
-	printf("%s\n", concat);
-	free(concat);
-	return (0);
-}
 
 int strl1(char *s1)
 {
@@ -84,12 +75,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	b = 0;
 
-	while (lens2)
+	while (lens2 && n)
 	{
 		str[a] = s2[b];
 		b++;
 		a++;
 		lens2--;
+		n--;
 	}
 	str[a] = '\0';
 	return (str);
