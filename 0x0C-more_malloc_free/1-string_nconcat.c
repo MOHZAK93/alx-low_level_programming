@@ -48,8 +48,8 @@ int strl2(char *s2)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *str, *c;
-	unsigned int lens1, lens2;
+	char *str;
+	unsigned int lens1, lens2, a, b;
 
 	if (s1 == NULL || s2 ==	NULL)
 		return (NULL);
@@ -63,21 +63,22 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (str == NULL)
 		return (NULL);
-	c = str;
+	a = 0;
 
-	while (*s1)
+	while (lens1)
 	{
-		*str = *s1;
-		str++;
-		s1++;
+		str[a] = s1[a];
+		a++;
+		lens1--;
 	}
-	while (*s2 &&  n)
+	b = 0;
+
+	while (lens2)
 	{
-		*str = *s2;
-		str++;
-		s2++;
-		n--;
+		str[a] = s2[b];
+		b++;
+		a++;
 	}
-	*str = '\0';
-	return (c);
+	str[a] = '\0';
+	return (str);
 }
