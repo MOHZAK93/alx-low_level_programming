@@ -7,15 +7,38 @@
   *
   *@old_size: old size allocated
   *@new_size: new size allocated
+  *@ptr: old allocated memory
   *
   *Return: void pointer
   */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	int *p;
-	if (new_size == 0)
-		return (NULL);
+	unsigned int i;
+	char *new, *old;
+
+	old = ptr;
+
 	if (new_size == old_size)
 		return (ptr);
-	p = malloc(new_size * sizeof(int));
+	if (ptr == NULL)
+	{
+		new = malloc(new_size * sizeof(char));
+		return (new);
+	}
+	if (new_size == NULL && ptr != NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
+	new = malloc(new_size * sizeof(char));
+	if (new == NULL)
+		return (NULL);
+	if (new_size < old_size)
+	{
+		for (i = 0; i < new_size; i++)
+			new[i] = old[i];
+		return (new);
+	}
+	free(ptr);
+	return (new);
 }
