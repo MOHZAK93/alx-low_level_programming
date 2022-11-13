@@ -16,7 +16,7 @@ unsigned int _strspn(char *s, char *accept)
 
 	k = l = 0;
 
-	while (*s != ',')
+	while (*s != ' ')
 	{
 		while (*accept)
 		{
