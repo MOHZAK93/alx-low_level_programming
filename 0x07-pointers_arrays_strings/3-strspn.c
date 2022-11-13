@@ -9,23 +9,19 @@
   *
   *Return: integer
   */
-
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int k, l;
+	int i, j, k;
 
-	k = l = 0;
+	k = 0;
 
-	while (*s != ' ')
+	for (i = 0; s[i] != ' '; i++)
 	{
-		while (*accept)
+		for (j = 0; accept[j] != '\0'; j++)
 		{
-			if (*s == *accept)
+			if (s[i] == accept[j])
 				k++;
-			accept++;
 		}
-		s++;
-		l += k;
 	}
-	return (l);
+	return (k);
 }
