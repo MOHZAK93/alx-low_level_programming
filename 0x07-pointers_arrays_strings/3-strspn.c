@@ -11,22 +11,20 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int k = 0;
+	int k, l;
 
-	while (*s)
+	k = l = 0;
+
+	while (*s != ',')
 	{
-		if (*s != ' ')
+		while (*accept)
 		{
-			while (*accept)
-			{	
-				if (*s == *accept)
-					k++;
-				accept++;
-			}
+			if (*s == *accept)
+				k++;
+			accept++;
 		}
-		else
-			return (k);
 		s++;
+		l += k;
 	}
-	return (k);
+	return (l);
 }
