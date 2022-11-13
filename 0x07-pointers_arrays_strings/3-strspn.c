@@ -6,12 +6,13 @@
   *
   *@s: string to test
   *@accept: string search
+  *
   *Return: integer
   */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int k, l;
+	unsigned int k, l;
 
 	k = l = 0;
 
