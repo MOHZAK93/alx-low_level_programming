@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
-  *print_len - function that prints the length of list
+  *list_len - function that prints the length of list
   *
   *@h: object argument
   *
