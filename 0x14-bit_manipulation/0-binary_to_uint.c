@@ -10,7 +10,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i = 0, decimal = 0, j;
+	int i = 0, decimal = 0;
 	const char *c = b;
 
 	if (b == NULL)
@@ -23,10 +23,12 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		b++;
 	}
-	for (j = 0, i--; i >= 0; i--)
+	printf("%d\n", i);
+	while (*c)
 	{
-		decimal += ((c[i] - '0') << j);
-		j++;
+		i--;
+		decimal += ((*c - '0') << i);
+		c++;
 	}
 	return (decimal);
 }
