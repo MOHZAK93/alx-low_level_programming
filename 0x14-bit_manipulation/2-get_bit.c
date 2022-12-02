@@ -15,14 +15,15 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned long int temp = n;
 
 	char *str;
-
+	
+	if (n == 0)
+		return (0);
 
 	while (n > 0)
 	{
 		n = n >> 1;
 		size++;
 	}
-	size++;
 
 	str = malloc(sizeof(char) * size);
 
@@ -35,7 +36,6 @@ int get_bit(unsigned long int n, unsigned int index)
 		temp = temp >> 1;
 		i++;
 	}
-	str[i] = '\0';
 
 	while (j < index)
 	{
