@@ -11,16 +11,11 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int size = 0, i = 0, j = 0;
+	/*unsigned int size = 0, i = 0, j = 0;
 	unsigned long int temp = n;
 
 	char *str;
-
-	if (n == 0)
-		return (0);
-	if (n == 1)
-		return (1);
-
+	
 	while (n > 1)
 	{
 		n = n >> 1;
@@ -43,5 +38,9 @@ int get_bit(unsigned long int n, unsigned int index)
 	{
 		j++;
 	}
-	return (str[j]);
+	return (str[j]);*/
+	if (index > 64)
+		return (-1);
+	else
+		return (n >> index & 1);
 }
