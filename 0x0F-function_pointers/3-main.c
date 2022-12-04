@@ -4,7 +4,7 @@
   *main -  Entry point
   *
   *@argc: number of arguments
-  *argv: argument pointer
+  *@argv: argument pointer
   *
   *Return: integer
   */
