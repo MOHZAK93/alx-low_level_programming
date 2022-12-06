@@ -12,7 +12,7 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t fd, i = 0;
+	ssize_t fd, wd, i = 0;
 	char *buf;
 
 	buf = malloc(sizeof(char) * (letters + 1));
@@ -31,7 +31,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	while (buf[i] != '\0')
 	{
-		_putchar(buf[i]);
+		wd = write(2, &buf[i], 1);
+		if (wd == -1)
+			return (0);
 		i++;
 	}
 
