@@ -45,9 +45,6 @@ ssize_t copy_from_one_to_another(const char *file_from, const char *file_to)
 
 	cf = close(fd);
 
-	if (cf == -1)
-		dprintf(fd, "Error: Can't close fd %lu\n", fd), exit(100);
-
 	fd = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 00664);
 
 	wf = write(fd, buf, rf);
