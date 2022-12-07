@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	if (argc != 3)
-		dprintf(0, "Usage: cp file_from file_to\n"), exit(97);
+		printf("Usage: cp file_from file_to\n"), exit(97);
 
 	copy_from_one_to_another(argv[1], argv[2]);
 	return (0);
