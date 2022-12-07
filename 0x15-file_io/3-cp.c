@@ -12,7 +12,9 @@
 int main(int argc, char *argv[])
 {
 	if (argc != 3)
-		printf("Usage: cp file_from file_to\n"), exit(97);
+	{
+		dprintf(2, "Usage: cp file_from file_to\n"), exit(97);
+	}
 
 	copy_from_one_to_another(argv[1], argv[2]);
 	return (0);
@@ -28,7 +30,6 @@ int main(int argc, char *argv[])
   *Return: 1 on success
   */
 
-
 ssize_t copy_from_one_to_another(const char *file_from, const char *file_to)
 {
 	ssize_t fd, wf, rf, cf;
@@ -41,7 +42,7 @@ ssize_t copy_from_one_to_another(const char *file_from, const char *file_to)
 	rf = read(fd, buf, 1024);
 
 	if (rf == -1 || fd == -1)
-		dprintf(fd, "Error: Can't read from file %s\n", file_from), exit(98);
+		dprintf(2, "Error: Can't read from file %s\n", file_from), exit(98);
 
 	cf = close(fd);
 
@@ -50,12 +51,12 @@ ssize_t copy_from_one_to_another(const char *file_from, const char *file_to)
 	wf = write(fd, buf, rf);
 
 	if (wf == -1 || fd == -1)
-		dprintf(fd, "Error: Can't write to %s\n", file_to), exit(99);
+		dprintf(2, "Error: Can't write to %s\n", file_to), exit(99);
 
 	cf = close(fd);
 
 	if (cf == -1)
-		dprintf(fd, "Error: Can't close fd %lu\n", fd), exit(100);
+		dprintf(2, "Error: Can't close fd %lu\n", fd), exit(100);
 
 	return (1);
 }
