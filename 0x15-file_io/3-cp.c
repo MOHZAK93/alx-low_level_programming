@@ -11,7 +11,8 @@
 
 int main(int argc, char *argv[])
 {
-	ssize_t fdfrom, fdto, rf, cf;
+	int fdfrom, fdto, cf;
+	ssize_t rf;
 	char *buf;
 
 	if (argc != 3)
