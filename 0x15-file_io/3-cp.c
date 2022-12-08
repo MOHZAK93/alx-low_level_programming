@@ -28,11 +28,11 @@ int main(int argc, char *argv[])
 	if (fdto == -1)
 		error_99(argv[2]);
 
-	while ((rf = read(fdfrom, buf, 1024)) > 0)
-	{
-		if (write(fdto, buf, rf) != rf)
-			error_99(argv[2]);
-	}
+	rf = read(fdfrom, buf, 1024);
+	wf = write(fdto, buf, rf);
+
+	if (wf != rf)
+		error_99(argv[2]);
 
 	if (rf == -1)
 		error_98(argv[1]);
