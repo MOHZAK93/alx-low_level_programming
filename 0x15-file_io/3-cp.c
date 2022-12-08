@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int fdfrom, fdto, cf;
-	ssize_t rf, wf;
+	ssize_t rf;
 	char *buf;
 
 	buf = malloc(sizeof(char) * 1024);
