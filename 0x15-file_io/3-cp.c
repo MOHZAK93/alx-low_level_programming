@@ -19,18 +19,16 @@ int main(int argc, char *argv[])
 		error_97();
 
 	fdfrom = open(argv[1], O_RDONLY);
-
 	if (fdfrom == -1)
 		error_98(argv[1]);
 
 	fdto = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 00664);
-
 	if (fdto == -1)
 		error_99(argv[2]);
 
 	while ((rf = read(fdfrom, buf, 1024)) > 0)
 	{
-		if (write (fdfrom, buf, rf) != rf)
+		if (write(fdto, buf, rf) != rf)
 			error_99(argv[2]);
 	}
 
