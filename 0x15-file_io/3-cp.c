@@ -67,7 +67,7 @@ ssize_t copy_from_one_to_another(const char *file_from, const char *file_to)
 	cf = close(fdt);
 	if (cf == -1)
 	{
-		dprintf(STDERR_FILENO,"Error: Can't close fd %d\n", fdt);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdt);
 		exit(100);
 	}
 
