@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	if (fdfrom == -1)
 		error_98(argv[1]);
 
-	fdto = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 00664);
+	fdto = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fdto == -1)
 		error_99(argv[2]);
 
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 	if (cf == -1)
 		error_100(fdto);
 
-	return (1);
+	return (0);
 }
 
 /**
@@ -51,7 +51,8 @@ int main(int argc, char *argv[])
   */
 void error_97(void)
 {
-	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+	exit(97);
 }
 /**
   *error_98 - function that prints error message
