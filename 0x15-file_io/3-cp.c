@@ -42,7 +42,7 @@ ssize_t copy_from_one_to_another(const char *file_from, const char *file_to)
 
 	rf = read(fd, buf, 1024);
 
-	if (rf == -1 || fd == -1)
+	if (fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
