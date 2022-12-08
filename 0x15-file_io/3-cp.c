@@ -33,41 +33,43 @@ int main(int argc, char *argv[])
 
 ssize_t copy_from_one_to_another(const char *file_from, const char *file_to)
 {
-	ssize_t fd, wf, rf, cf;
+	int fdt, fdf, rf, cf;
 	char *buf;
 
-	fd = open(file_from, O_RDONLY);
+	fdf = open(file_from, O_RDONLY);
 
 	buf = malloc(sizeof(char) * 1024);
 
-	rf = read(fd, buf, 1024);
-
-	if (fd == -1)
+	if (fdf == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
+	rf = read(fdf, buf, 1024);
 
-	cf = close(fd);
+	fdt = open(file_to, O_RDWR | O_CREAT | O_TRUNC, 00664);
 
-	fd = open(file_to, O_RDWR | O_CREAT | O_TRUNC, 00664);
+	write(fdt, buf, rf);
 
-	wf = write(fd, buf, rf);
-
-	if (wf == -1 || fd == -1)
+	if (fdt == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
 
-	cf = close(fd);
+	cf = close(fdf);
 
 	if (cf == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %lu\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdf);
+		exit(100);
+	}
+	cf = close(fdt);
+	if (cf == -1)
+	{
+		dprintf(STDERR_FILENO,"Error: Can't close fd %d\n", fdt);
 		exit(100);
 	}
 
 	return (1);
 }
-
