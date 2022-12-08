@@ -32,6 +32,9 @@ int main(int argc, char *argv[])
 			error_99(argv[2]);
 	}
 
+	if (rf == -1)
+		error_98(argv[1]);
+
 	cf = close(fdfrom);
 	if (cf == -1)
 		error_100(fdfrom);
