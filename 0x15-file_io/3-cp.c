@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
 	int fdfrom, fdto, cf;
 	ssize_t rf;
-	char *buf;
+	char buf[1024];
 
 	if (argc != 3)
 		error_97();
@@ -23,7 +23,6 @@ int main(int argc, char *argv[])
 	if (fdfrom == -1)
 		error_98(argv[1]);
 
-	buf = malloc(sizeof(char) * 1024);
 	rf = read(fdfrom, buf, 1024);
 
 	fdto = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 00664);
