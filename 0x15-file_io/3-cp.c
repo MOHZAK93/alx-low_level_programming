@@ -23,14 +23,16 @@ int main(int argc, char *argv[])
 	if (fdfrom == -1)
 		error_98(argv[1]);
 
-	rf = read(fdfrom, buf, 1024);
-
 	fdto = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 00664);
-
-	write(fdto, buf, rf);
 
 	if (fdto == -1)
 		error_99(argv[2]);
+
+	while ((rf = read(fdfrom, buf, 1024)) > 0)
+	{
+		if (write (fdfrom, buf, rf) != rf)
+			error_99(argv[2]);
+	}
 
 	cf = close(fdfrom);
 	if (cf == -1)
