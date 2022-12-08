@@ -13,7 +13,9 @@ int main(int argc, char *argv[])
 {
 	int fdfrom, fdto, cf;
 	ssize_t rf;
-	char buf[1024];
+	char *buf;
+
+	buf = malloc(sizeof(char) * 1024);
 
 	if (argc != 3)
 		error_97();
