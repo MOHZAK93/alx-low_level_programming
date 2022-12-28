@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  *
@@ -9,36 +10,24 @@
 
 int main(void)
 {
-int i = 0;
-int j = 1;
-int k = 0;
-while (i <= 8)
-{
-while (j <= 9)
-{
-if (i < j)
-{
-putchar(i + '0');
-putchar(j + '0');
+	int i, j;
 
-k = i + j;
-if (k < 17)
-{
-putchar(44);
-putchar(32);
-}
-else
-{
-}
-}
-else
-{
-}
-j++;
-}
-j = 1;
-i++;
-}
-putchar(10);
-return (0);
+	for (i = 0; i < 9; i++)
+	{
+		for (j = 0; j <= 9; j++)
+		{
+			if (i < j)
+			{
+				putchar(i + '0');
+				putchar(j + '0');
+				if (i + j < 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }

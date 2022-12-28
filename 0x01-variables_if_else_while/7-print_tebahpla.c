@@ -9,15 +9,16 @@
 
 int main(void)
 {
-char a, z;
-a = 'a';
-z = 'z';
+	char a, z;
 
-while (z >= a)
-{
-putchar(z);
-z--;
-}
-putchar(10);
-return (0);
+	a = 'a';
+	z = 'z';
+
+	while (z >= a)
+	{
+		putchar(z);
+		z--;
+	}
+	putchar(10);
+	return (0);
 }

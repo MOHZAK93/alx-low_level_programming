@@ -9,42 +9,29 @@
 
 int main(void)
 {
-int i, j, k, l;
-i = 0;
-j = 1;
-k = 2;
-while (i < 8)
-{
-while (j < 9)
-{
-while (k < 10)
-{
-if (i < j && j < k)
-{
-putchar(i + '0');
-putchar(j + '0');
-putchar(k + '0');
-l = i + j + k;
-if (l < 24)
-{
-putchar(44);
-putchar(32);
-}
-else
-{
-}
-}
-else
-{
-}
-k++;
-}
-k = 0;
-j++;
-}
-j = 0;
-i++;
-}
-putchar(10);
-return (0);
+	int i, j, k;
+
+	for (i = 0; i < 8; i++)
+	{
+		for (j = 0; j < 9; j++)
+		{
+			for (k = 0; k <= 9; k++)
+			{
+				if (i < j && j < k)
+				{
+					putchar(i + '0');
+					putchar(j + '0');
+					putchar(k + '0');
+
+					if (i + j + k < 24)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
+		}
+	}	
+	putchar('\n');
+	return (0);
 }
