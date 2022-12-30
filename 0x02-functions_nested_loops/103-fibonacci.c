@@ -11,26 +11,20 @@
 
 int main(void)
 {
-int i;
-long int j = 1;
-long int k = 2;
-long int sum = 0;
-for (i = 0; i < k && k <= 4000000; i++)
-{
-if (j % 2 == 0)
-{
-sum += j;
-}
-else if (k % 2 == 0)
-{
-sum += k;
-}
-else
-{
-}
-j += k;
-k += j;
-}
-printf("%ld\n", sum);
-return (0);
+	int i;
+	long int j = 1;
+	long int k = 2;
+	long int sum = 0;
+
+	for (i = 0; i < k && k <= 4000000; i++)
+	{
+		if (j % 2 == 0)
+			sum += j;
+		else if (k % 2 == 0)
+			sum += k;
+		j += k;
+		k += j;
+	}
+	printf("%ld\n", sum);
+	return (0);
 }

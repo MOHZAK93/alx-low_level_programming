@@ -6,9 +6,6 @@
  *
  * @n: The parameter to the function
  *
- * Description: Write a function that prints
- * the last digit of a number.
- *
  * Return: value of last digit.
  */
 

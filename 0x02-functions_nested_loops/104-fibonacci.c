@@ -11,23 +11,20 @@
 
 int main(void)
 {
-int i;
-unsigned long long int j = 1;
-unsigned long long int k = 2;
+	int i;
+	unsigned long int j = 1;
+	unsigned long int k = 2;
 
-for (i = 0; i < 49; i++)
-{
-printf("%llu, %llu", j, k);
-if (i < 48)
-{
-printf(", ");
-}
-else
-{
-}
-j += k;
-k += j;
-}
-printf("\n");
-return (0);
+	for (i = 0; i < 98; i++)
+	{
+		printf("%lu, %lu", j, k);
+		if (i < 48)
+		{
+			printf(", ");
+		}
+		j += k;
+		k += j;
+	}
+	printf("\n");
+	return (0);
 }
