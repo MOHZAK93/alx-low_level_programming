@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /**
-* main - Entry point
-*p
+* main - causes an infinite loop
 * Return: 0
 */
 
