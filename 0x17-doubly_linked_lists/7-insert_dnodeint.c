@@ -36,7 +36,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		lookup = lookup->next;
 		i++;
 	}
-	if ((i == idx -1) && lookup != NULL)
+	if ((i == idx - 1) && lookup != NULL)
 	{
 		new_node->prev = lookup;
 		new_node->next = lookup->next;
