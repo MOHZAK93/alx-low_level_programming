@@ -35,8 +35,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		if (lookup->next != NULL)
 			lookup->next->prev = lookup->prev;
 		lookup->prev->next = lookup->next;
-		/*lookup->next = lookup->next->next;
-		lookup->next->next->prev = lookup;*/
+		/**
+		 * lookup->next = lookup->next->next;
+		 *lookup->next->next->prev = lookup;
+		 */
 	}
 	return (-1);
 }
