@@ -15,7 +15,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	unsigned int i = 0, idx;
 
 	if (*head == NULL)
-		return (-1);
+		return (1);
 
 	if ((*head)->next == NULL)
 	{
@@ -30,7 +30,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (1);
 	}
 	idx = index - 1;
-	while (i < idx && lookup != NULL)
+	while (i != idx && lookup != NULL)
 	{
 		lookup = lookup->next;
 		i++;
