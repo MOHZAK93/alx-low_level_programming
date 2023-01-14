@@ -11,15 +11,19 @@
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
+	listint_t *lookup = head;
 	unsigned int i = 0;
 
-	while (i < index)
-	{
-		i++;
-		head = head->next;
-	}
-	if (head != NULL)
+	if (head == NULL)
 		return (NULL);
 
-	return (head);
+	while (i != index)
+	{
+		i++;
+		lookup = lookup->next;
+		if (lookup == NULL)
+			return (NULL);
+	}
+
+	return (lookup);
 }
