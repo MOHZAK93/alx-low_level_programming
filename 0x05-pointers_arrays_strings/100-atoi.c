@@ -9,5 +9,20 @@
 
 int _atoi(char *s)
 {
+	int res = 0, sign = 1;
+
+	while (*s)
+	{
+		if (*s == '-')
+			sign *= -1;
+		while (*s >= 48 && *s <= 57)
+		{
+			res = res * 10 + *s - '0';
+			s++;
+			if (!(*s >= 48 && *s <= 57))
+				return (sign * res);
+		}
+		s++;
+	}
 	return (0);
 }
