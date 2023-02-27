@@ -20,9 +20,9 @@ int _atoi(char *s)
 			res = res * 10 + *s - '0';
 			s++;
 			if (!(*s >= 48 && *s <= 57) && sign == 1)
-				return ((unsigned int)res);
+				return ((signed int)res);
 			if (!(*s >= 48 && *s <= 57) && sign == -1)
-				return (-res);
+				return ((unsigned int)res);
 		}
 		s++;
 	}
