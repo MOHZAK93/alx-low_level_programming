@@ -17,12 +17,10 @@ int _atoi(char *s)
 			sign *= -1;
 		while (*s >= 48 && *s <= 57)
 		{
-			res = res * 10 + *s - '0';
+			res = res * 10 + sign * (*s - '0');
 			s++;
-			if (!(*s >= 48 && *s <= 57) && sign == 1)
-				return ((signed int)res);
-			if (!(*s >= 48 && *s <= 57) && sign == -1)
-				return ((unsigned int)res);
+			if (!(*s >= 48 && *s <= 57))
+				return (res);
 		}
 		s++;
 	}
