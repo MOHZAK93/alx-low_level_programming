@@ -14,10 +14,10 @@ int main(void)
 	int i;
 	unsigned long int j = 1, k = 2;
 
-	for (i = 0; i < 45; i++)
+	for (i = 0; i < 46; i++)
 	{
 		printf("%lu, %lu", j, k);
-		if (i < 44)
+		if (i < 45)
 		{
 			printf(", ");
 		}
