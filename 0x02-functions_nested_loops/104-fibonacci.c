@@ -12,13 +12,12 @@
 int main(void)
 {
 	int i;
-	unsigned long int j = 1;
-	unsigned long int k = 2;
+	unsigned long int j = 1, k = 2;
 
-	for (i = 0; i < 49; i++)
+	for (i = 0; i < 48; i++)
 	{
 		printf("%lu, %lu", j, k);
-		if (i < 48)
+		if (i < 47)
 		{
 			printf(", ");
 		}
