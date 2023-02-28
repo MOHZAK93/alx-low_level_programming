@@ -16,7 +16,7 @@ int main(void)
 
 	for (i = 0; i < 48; i++)
 	{
-		if (i > 45)
+		if (i > 44)
 		{
 			x = j % 10;
 			y = k % 10;
