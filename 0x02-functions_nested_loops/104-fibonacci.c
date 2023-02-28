@@ -12,18 +12,10 @@
 int main(void)
 {
 	int i;
-	unsigned long int j = 1, k = 2, x, y;
+	unsigned long int j = 1, k = 2;
 
 	for (i = 0; i < 48; i++)
 	{
-		if (i > 44)
-		{
-			x = j % 10;
-			y = k % 10;
-			j = j / 10;
-			k = j /10;
-			printf("%lu%lu, %lu%lu", j, x, k, y);
-		}
 		printf("%lu, %lu", j, k);
 		if (i < 47)
 		{
