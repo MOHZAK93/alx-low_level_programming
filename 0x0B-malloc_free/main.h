@@ -8,4 +8,5 @@ void free_grid(int **grid, int height);
 char **strtow(char *str);
 char *argstostr(int ac, char **av);
 int array_size(int ac, char **av);
+int word_count(char *str);
 #endif
