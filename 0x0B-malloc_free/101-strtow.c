@@ -19,7 +19,7 @@ char **strtow(char *str)
 
 	if (str == NULL || strcmp(str, "") == 0 || strcmp(str, " ") == 0)
 		return (NULL);
-	ptr = malloc(sizeof(char) * w);
+	ptr = malloc(sizeof(char *) * w);
 	if (!ptr)
 		return (NULL);
 	while (i < w)
@@ -33,7 +33,7 @@ char **strtow(char *str)
 				j++;
 				str++;
 			}
-			ptr[i] = malloc(sizeof(char) * (j + 1));
+			ptr[i] = malloc(sizeof(char) * (j + 2));
 			k = 0;
 			while (k < j)
 			{
