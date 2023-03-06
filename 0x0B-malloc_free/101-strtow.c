@@ -41,7 +41,6 @@ char **strtow(char *str)
 				copy++;
 				k++;
 			}
-			ptr[i][k] = '\0';
 			i++;
 		}
 		str++;
