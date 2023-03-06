@@ -16,10 +16,10 @@ char **strtow(char *str)
 	char **ptr, *copy;
 	int w = word_count(str), i = 0, j, k;
 
-	if (str == NULL || strcmp(str, "") == 0 || strcmp(str, " ") == 0)
-		return (NULL);
-	ptr = malloc(sizeof(char *) * w);
-	if (!ptr)
+	if (str == 0)
+		return (0);
+	ptr = malloc(sizeof(char *) * (w + 1));
+	if (ptr == NULL)
 		return (NULL);
 	while (i < w)
 	{
