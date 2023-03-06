@@ -14,12 +14,9 @@
 char **strtow(char *str)
 {
 	char **ptr, *copy;
-	int w = word_count(str);
-	int i = 0, j, k;
+	int w = word_count(str), i = 0, j, k;
 
-	if (str == NULL || strcmp(str, "") == 0)
-		return (NULL);
-	if (strcmp(str, " ") == 0)
+	if (str == NULL || strcmp(str, "") == 0 || strcmp(str, " ") == 0)
 		return (NULL);
 	ptr = malloc(sizeof(char *) * w);
 	if (!ptr)
@@ -36,6 +33,13 @@ char **strtow(char *str)
 				str++;
 			}
 			ptr[i] = malloc(sizeof(char) * j);
+			if (ptr[i] == NULL)
+			{
+				for (k = 0; k < w; k++)
+					free(ptr[k]);
+				free(ptr);
+				return (NULL);
+			}
 			k = 0;
 			while (k < j)
 			{
