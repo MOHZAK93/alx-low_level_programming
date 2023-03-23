@@ -13,6 +13,6 @@ def island_perimeter(grid):
         for y in x:
             if y == 1:
                 sum += 1
-    if sum = 1:
+    if sum == 1 or sum == 0:
         return 0
     return (sum + 1) * 2
