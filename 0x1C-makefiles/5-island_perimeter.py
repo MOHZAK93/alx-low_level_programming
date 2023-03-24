@@ -9,10 +9,11 @@ def island_perimeter(grid):
         grid: a list of list of integers
     """
     sum = 0
-    for x in grid:
-        for y in x:
+    for a, x in enumerate(grid):
+        for b, y in enumerate(x):
             if y == 1:
-                sum += 1
-    if sum == 1 or sum == 0:
-        return 0
+                if b != 0 and b!= len(x) - 1:
+                    sum += 1
+    if sum == 0 or sum == 1:
+        return sum
     return (sum + 1) * 2
