@@ -25,7 +25,7 @@ int main(int ac, char *av[])
 	if (!op_func)
 		printf("Error\n"), exit(99);
 
-	if ((*av[2] == '/' || *av[2] == '%') && !b)
+	if ((av[2][0] == '/' || av[2][0] == '%') && !b)
 		printf("Error\n"), exit(100);
 
 	printf("%d\n", op_func(a, b));
