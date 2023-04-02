@@ -22,12 +22,12 @@ int main(int ac, char *av[])
 	if (ac != 4)
 		printf("Error\n"), exit(98);
 
+	if (!op_func)
+		printf("Error\n"), exit(99);
+
 	if ((*av[2] == '/' || *av[2] == '%') && !b)
 		printf("Error\n"), exit(100);
 
-	if (!op_func)
-		printf("Error\n"), exit(99);
-	
 	printf("%d\n", op_func(a, b));
 
 	return (0);
