@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
 	while (b < a)
 	{
-		printf("%02hhx", *((unsigned char *)main + b));
+		printf("%.2x", *((unsigned char *)main + b));
 		if (b < a - 1)
 			printf(" ");
 		else
