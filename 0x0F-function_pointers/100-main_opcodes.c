@@ -13,11 +13,10 @@
 int main(int argc, char *argv[])
 {
 	int bytes, (*address)(int, char **) = main, i;
-	unsigned char opcode;
 
 	if (argc != 2)
 		printf("Error\n"), exit(1);
-	
+
 	bytes = atoi(argv[1]);
 
 	if (bytes < 0)
@@ -25,8 +24,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < bytes; i++)
 	{
-		opcode = *(unsigned char *)address;
-		printf("%.2x", opcode);
+		printf("%.2x", *((unsigned char *)address));
 
 		if (i == bytes - 1)
 			continue;
