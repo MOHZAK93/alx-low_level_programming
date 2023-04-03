@@ -25,7 +25,8 @@ int main(int argc, char *argv[])
 		printf("%02hhx", *((char *)main + b));
 		if (b < a - 1)
 			printf(" ");
-		printf("\n");
+		else
+			printf("\n");
 		b++;
 	}
 	return (0);
