@@ -12,24 +12,25 @@
 
 int main(int argc, char *argv[])
 {
-	int a = atoi(argv[1]), b = 0;
+	int bytes = atoi(argv[1]), b = 0;
 	int (*address)(int, char **) = main;
 
 	if (argc != 2)
 		printf("Error\n"), exit(1);
 
-	if (a < 0)
+	if (bytes < 0)
 		printf("Error\n"), exit(2);
 
-	while (b < a)
+	for (b = 0; b < bytes; b++)
 	{
-		printf("%.2x", *(unsigned char *)address);
-		if (b < a - 1)
-			printf(" ");
-		else
-			printf("\n");
-		b++;
+		printf("%.2x", *((unsigned char *)address));
+
+		if (b == bytes - 1)
+			continue;
+		printf(" ");
+
 		address++;
 	}
+	printf("\n");
 	return (0);
 }
