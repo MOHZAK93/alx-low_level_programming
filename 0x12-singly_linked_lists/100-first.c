@@ -4,13 +4,10 @@
   *beforemain - function that executes before main
   */
 
-void beforemain(void) __attribute__ ((constructor));
-
-void beforemain(void)
+void __attribute__((constructor)) beforemain(void)
 {
 	char *tx;
 
 	tx = "You're beat! and yet, you must allow,\nI bore my house upon my back!\n";
-	printf("%s\n", tx);
-
+	printf("%s", tx);
 }
