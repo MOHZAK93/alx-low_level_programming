@@ -1,4 +1,4 @@
-#include "search_alogs.h"
+#include "search_algos.h"
 
 /**
  * linear_search - Searches for a value in an array of integers using LSA
